@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 12px;
+}
+
+body{
+    font-size: 1rem;
+    background-color: #FAEED1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;    
+}
+
+.container header{
+    height: 80px;
+}
+
+.container main{
+    height: 100vh;
+}
+
+.container footer{
+    height: 140px;
+}
+
+#titulo{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Dosis', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    color: #474019
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+main{
+    display: inline-block;
+    margin-top: 30px;
+}
+
+#izquierda{
+    float: left;
+    margin-left: 30px;
+    background-color: #FDF7E4;
+}
+
+#derecha{
+    margin-right: 30px;
+    background-color: #FDF7E4;
+    display: inline-block;
+    float: right;
+    height: 1000px;
+}
+
+.modal {
+    display: none;
+    z-index: 1;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+  }
+  
+  .close {
+    float: right;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #000;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 305px;
+    margin-bottom: 10px;
+    resize: none;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+.boton-agregar:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.control-panel{
+    height: 10%;
+    display: inline-block;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.notas{
+    height: 90%;
+    width: 100%;
+}
+
+input[type="text"]{
+    font-size: 20px;
+    margin: 10px 0;
+    height: 40px;
+    width: 70%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: 'Dosis', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+textarea{
+    font-size: 20px;
+    font-family: 'Dosis', Impact, Haettenschweiler, 'Arial Bold', sans-serif;
+    height: 200px;
+    width: 100%;
+    border: none;
+    background-color: #f0f0f0;
+    outline: none;
+    border-radius: 5px;
+
+}
+
+.boton-add-note{
+    font-family: 'Dosis', Impact, Haettenschweiler, 'Arial Bold', sans-serif;
+    color: #000000;
+    font-size: 16px;
+    height: 45px;
+    width: 80px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #dbdbdb;
+}
+
+.boton-add-note:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.lista-titulos{
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.container-titulos{
+    font-size: 22px;
+    color: #685d49;
+    text-align: left;
+    height: 60px;
+    width: 100%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #DED0B6;
+    outline: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 10px;
+}
+
+.container-titulos:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.titulo-contenido{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5px;
+    align-self: center;
+    text-justify: center;
+}
+
+.container-titulo-contenido{
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    width: 98%;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.form-notas{
+    text-align: center;   
+}
+
+#boton-add{
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    height: 70px;
+    width:  80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #BBAB8C;
+}
+
+#boton-add:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.form-nota-get{
+    text-align: center;
+}
+
+.margen{
+    height: 100%;
+    width: 15%;
+    margin-right: 5px;
+    border-right: 1px solid #BBAB8C;
+    float: left;
+}
+
+.renglones{
+    border-left: 1px solid #BBAB8C;
+    height: 100%;
+    width: 84%;
+    float: right;
+    color: #685d49;
+}
+
+.renglon{
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid #aca394;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-indent: 10px;
+    padding-top: 3px;
+}
+
+.margen-top{
+    height: 120px;
+    width: 100%;
+}
+
+.titulo-pestaña{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    color: #584f3e;
+}
+
+.form-centrado{
+    text-align: center;
+}
+
+
+.container-nota{
+    display: inline-block;
+    width: 96%;
+    height: 100%;
+    margin-left: 13px;
+    margin-right: 12px;
+    align-items: center;
+    align-self: center;
+    background-color: #DED0B6;
+    
+}
+
+.nota{
+    float: left;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.eliminar{
+    float: right;
+    height: 100%;
+    width: 20px;
+    border: 0px;
+    background-color: #800828;
+}
+
+.equis{
+    background-color: transparent;
+    color: #fff;
+    border: 0px;
+    font-size: 15px;    
+    text-justify: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.equis:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.hueco{
+    height: 30px;
+    width: 30px;
+    background-color: #FAEED1;
+    margin-top: 315px;
+    border-radius: 100%;
+    border: 1px solid #faecca;
+    margin-left: 30px;
+}

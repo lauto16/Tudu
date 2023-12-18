@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'master.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+<body>
+    <div class="main-div">
+        <h1 class="title-div"><strong>Tudu</strong></h1>
+        <div class="login">
+            <p class="title-login">Registrarse</p>
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="boton_sign">
+                    <input class="boton" type="submit" value="Enviar">
+                </div>
+            </form>
+            {% if not error_bd %}
+                <p>{{ datos_error }}</p>
+            {% endif %}
+
+            {% if error %}
+            <div class="lista-errores-div">
+                <ul class="lista-errores">
+                    {% for message in error %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            <p id="p-sign">¿Ya tienes una cuenta? <br><a id="a-sign" href="/login">Inicia sesion</a></p>
+        </div> 
+    </div>
+</body>
+</html>

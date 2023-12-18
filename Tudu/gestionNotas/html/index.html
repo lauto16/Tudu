@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'master_main.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tudu</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="titulo">Tudu</h1>
+        </header>
+        <main>
+            <section class="seccion" id="izquierda">
+                <div class="margen-top"><h1 class="titulo-pestaña">Mis notas</h1></div>
+                {% for titulo in titulos %}
+                    <ul class="lista-titulos">
+                        <li class="elemento-titulo">
+                            <div class="container-nota">
+                                <div class="nota">
+                                    <form class="form-centrado" method="get">
+                                        <input type="submit" name="ver-nota" value="{{ titulo }}" class="container-titulos">
+                                    </form>
+                                </div>
+                                <div>
+                                    <form class="form-centrado" action="" method="get">
+                                        <input type="hidden" name="borrar-nota-titulo" value="{{ titulo }}" class="">
+                                        <div class="eliminar"> 
+                                            <div class="contenedor-equis">
+                                                <input type="submit" name="borrar-nota" class="equis" value="x">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>              
+                            </div>
+                        </li>
+                    </ul>
+                {% endfor %}
+                <button id="boton-add">+</button>
+                <div class="modal" id="myModal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h2 id="title-note">Agregar nota</h2>
+                      
+                      <form class="form-nota" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input placeholder="Titulo de la nota" class="" name="title" type="text">
+                        <textarea name="note" id="noteInput" placeholder="Escriba su nota aqui"></textarea>
+                        <div>
+                            <button class="boton-add-note" id="saveNoteBtn">Guardar nota</button>    
+                        </div>
+                        
+                      </form>
+
+                      {% if error_message %}
+                        <p>{{ error_message }}</p>
+                      {% endif %}
+                    </div>
+                  </div>
+            </section>
+            <section class="seccion" id="derecha">
+                <div class="margen">
+                    <div class="hueco"></div>
+                    <div class="hueco"></div>
+                </div>
+                <div class="renglones">
+                    <div class="margen-top"></div>
+                    <div class="renglon"><strong>{{nota.titulo}}</strong></div>
+                    <div class="renglon"></div>
+                    <div class="renglon" id="renglon-1">{{contenido_nota.0}}</div>
+                    <div class="renglon" id="renglon-2">{{contenido_nota.1}}</div>
+                    <div class="renglon" id="renglon-3">{{contenido_nota.2}}</div>
+                    <div class="renglon" id="renglon-4">{{contenido_nota.3}}</div>
+                    <div class="renglon" id="renglon-5">{{contenido_nota.4}}</div>
+                    <div class="renglon" id="renglon-6">{{contenido_nota.5}}</div>
+                    <div class="renglon" id="renglon-7">{{contenido_nota.6}}</div>
+                    <div class="renglon" id="renglon-8">{{contenido_nota.7}}</div>
+                    <div class="renglon" id="renglon-9">{{contenido_nota.8}}</div>
+                    <div class="renglon" id="renglon-10">{{contenido_nota.9}}</div>
+                    <div class="renglon" id="renglon-11">{{contenido_nota.10}}</div>
+                    <div class="renglon" id="renglon-12">{{contenido_nota.11}}</div>
+                    <div class="renglon" id="renglon-13">{{contenido_nota.12}}</div>
+                    <div class="renglon" id="renglon-14">{{contenido_nota.13}}</div>
+                    <div class="renglon" id="renglon-15">{{contenido_nota.14}}</div>
+                    <div class="renglon" id="renglon-16">{{contenido_nota.15}}</div>
+                    <div class="renglon" id="renglon-17">{{contenido_nota.16}}</div>
+                    <div class="renglon" id="renglon-18">{{contenido_nota.17}}</div>
+                    <div class="renglon" id="renglon-19">{{contenido_nota.18}}</div>
+                    <div class="renglon" id="renglon-20">{{contenido_nota.19}}</div>
+                    <div class="renglon" id="renglon-21">{{contenido_nota.20}}</div>
+                    <div class="renglon" id="renglon-22">{{contenido_nota.21}}</div>
+                    <div class="renglon" id="renglon-23">{{contenido_nota.22}}</div>
+                    <div class="renglon" id="renglon-24">{{contenido_nota.23}}</div>
+                    <div class="renglon" id="renglon-25">{{contenido_nota.24}}</div>
+
+                </div>
+            </div>
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
+    </div>
+    <script src="{% static 'main.js' %}"></script>
+</body>
+</html>
