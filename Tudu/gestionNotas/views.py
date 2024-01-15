@@ -89,6 +89,7 @@ def vista_register(request):
     error = []
     respuesta = False
     reason = ""
+    existantAccount = ""
 
     if request.method == "POST":
         form = Register(request.POST)
